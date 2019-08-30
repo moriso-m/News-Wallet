@@ -1,0 +1,274 @@
+{
+	"info": {
+		"_postman_id": "226f67e3-a201-4dc1-a941-bed2a5f8d6be",
+		"name": "news-wallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=mercy@gmail.com&password=*bazuu",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mercy@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "*bazuu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories?type=politics&description=this category contains articles on kenyan politics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "politics"
+						},
+						{
+							"key": "description",
+							"value": "this category contains articles on kenyan politics"
+						}
+					]
+				},
+				"description": "Add a new category to the list of existing categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Show category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				},
+				"description": "Display a specific category in the list"
+			},
+			"response": []
+		},
+		{
+			"name": "Update category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				},
+				"description": "When you want to make changes to the Categories, use this url"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete category",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories",
+						"1"
+					]
+				},
+				"description": "Remove a category from the list by specifying giving its key on the url"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFkOWFiYTQ0ODhlMGExZjhlOTI4YmM5MjM1MjEwNTMxOTgxYjFlNGM3OTMyNGY5ZjM0ZjJlMWYxZjhhODQ3OGRiMWIxODk4YTBlZDQ3ZDQxIn0.eyJhdWQiOiIxIiwianRpIjoiYWQ5YWJhNDQ4OGUwYTFmOGU5MjhiYzkyMzUyMTA1MzE5ODFiMWU0Yzc5MzI0ZjlmMzRmMmUxZjFmOGE4NDc4ZGIxYjE4OThhMGVkNDdkNDEiLCJpYXQiOjE1NjcxMjA5MDIsIm5iZiI6MTU2NzEyMDkwMiwiZXhwIjoxNTk4NzQzMzAxLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.U1OeKxhYsO7s_ws0ecXdZbzbUbAZ_oSpKFsmElrwOin11dMA-nGMgdaFE--7z8mcy2GVIScGA57VARQxCk9IMnYwwJgYiFh76dMlwnR2D1XRtvsAYvaAM5SYtVpBi4-J6h8WlIafIodmMq7PnIoUeFuBcrjePBNM9J1xOP9yZXqC7caCzPkeF44EDWT-cQa8qKJNxDCveMMDT6s3i15BDPB0botU3Ez1RWqeav0l6_dGrHxGbfTAUg2RP8YtFEXUVcg43_Pp1bO_fEprhf2YJE3-iLFHPoh3eEP62N_2Cu6MhGl9PZSZUz75iqmcFfGNZPFJmcHFY5yzsWArtDTzgcy00KMQnOnr1dhRWmC1-K-SUwGqOqUurfZnpk4gBgyQDzgzw0jCy3HNr716qCVvtYOtdxzMTwtrkjVRH-hcFNrqs7EvIKgqgmSkWGas554PqmTZZv2Ox9LXC9AL4sDCErSJMMFouvW8HWBVKLWWfiBz3bOPQEdol0ZD73OEqod4Mv4ALhkor5CjBHYllAAYP2TZlj1HrnbKgEYmUw7attRDZrDO8_3q5Zb0GzORW4QCf8trpuPrkACuLwSt5_FM1V0vIsuL1E5EaV-7Ju-qY6Rv6s4rCSAWMSDs6-ZoMIWM-Y5UR3q7SRSU8XMCyTuWPiIrxFmXm2aYtg0Zq4VCaxU",
+				"type": "string"
+			}
+		]
+	}
+}
